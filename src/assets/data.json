@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "پیتزا پپرونی",
+    "price": 150000,
+    "short_description": "پیتزا با پنیر و سوسیس پپرونی",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 2,
+    "name": "همبرگر کلاسیک",
+    "price": 120000,
+    "short_description": "برگر با گوشت تازه، کاهو و گوجه",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 3,
+    "name": "سیب‌زمینی سرخ‌شده",
+    "price": 50000,
+    "short_description": "سیب‌زمینی ترد و طلایی",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 4,
+    "name": "هات‌داگ ویژه",
+    "price": 80000,
+    "short_description": "هات‌داگ با سس مخصوص و نان نرم",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 5,
+    "name": "پیتزا سبزیجات",
+    "price": 130000,
+    "short_description": "پیتزا با سبزیجات تازه و طعم‌دار",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 6,
+    "name": "تاکو مکزیکی",
+    "price": 90000,
+    "short_description": "تاکو پر شده با گوشت و سبزیجات تازه",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 7,
+    "name": "پیتزا چهار فصل",
+    "price": 160000,
+    "short_description": "پیتزا با ترکیب طعم‌های متنوع",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 8,
+    "name": "نوشابه",
+    "price": 20000,
+    "short_description": "نوشابه خنک در طعم‌های متنوع",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 9,
+    "name": "سالاد سزار",
+    "price": 60000,
+    "short_description": "سالاد با مرغ گریل شده و سس سزار",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 10,
+    "name": "مرغ سوخاری",
+    "price": 110000,
+    "short_description": "مرغ سوخاری با ادویه‌های ویژه",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 11,
+    "name": "پاستا آلفردو",
+    "price": 140000,
+    "short_description": "پاستا با سس آلفردو و مرغ",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 12,
+    "name": "ساندویچ ژامبون",
+    "price": 80000,
+    "short_description": "ساندویچ با ژامبون و پنیر",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 13,
+    "name": "چیز برگر",
+    "price": 130000,
+    "short_description": "برگر با پنیر و سس مخصوص",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 14,
+    "name": "پیتزا مارگاریتا",
+    "price": 120000,
+    "short_description": "پیتزا با پنیر و گوجه تازه",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 15,
+    "name": "استیک گوشت",
+    "price": 250000,
+    "short_description": "استیک با گوشت تازه و سس مخصوص",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 16,
+    "name": "بال مرغ کبابی",
+    "price": 80000,
+    "short_description": "بال مرغ کبابی با ادویه مخصوص",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 17,
+    "name": "کیک شکلاتی",
+    "price": 60000,
+    "short_description": "کیک تازه با طعم شکلات",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 18,
+    "name": "لازانیا",
+    "price": 150000,
+    "short_description": "لازانیا با گوشت و پنیر",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 19,
+    "name": "پنینی مرغ",
+    "price": 110000,
+    "short_description": "پنینی با مرغ گریل شده",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 20,
+    "name": "اسموتی میوه‌ای",
+    "price": 50000,
+    "short_description": "اسموتی با میوه‌های تازه",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 21,
+    "name": "کباب کوبیده",
+    "price": 180000,
+    "short_description": "کباب کوبیده ایرانی با برنج",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 22,
+    "name": "ماهی گریل شده",
+    "price": 220000,
+    "short_description": "ماهی گریل شده با سبزیجات",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 23,
+    "name": "شاورما",
+    "price": 100000,
+    "short_description": "شاورما مرغ با سس مخصوص",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 24,
+    "name": "پیتزا قارچ",
+    "price": 140000,
+    "short_description": "پیتزا با قارچ و پنیر",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 25,
+    "name": "چیز کیک",
+    "price": 70000,
+    "short_description": "چیز کیک با پایه بیسکویتی",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 26,
+    "name": "سوپ سبزیجات",
+    "price": 40000,
+    "short_description": "سوپ با سبزیجات تازه و طعم‌دار",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 27,
+    "name": "نوشیدنی قهوه",
+    "price": 50000,
+    "short_description": "قهوه تازه دم شده",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 28,
+    "name": "پیتزا بیف",
+    "price": 170000,
+    "short_description": "پیتزا با گوشت گوساله و پنیر",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 29,
+    "name": "برگر گیاهی",
+    "price": 100000,
+    "short_description": "برگر گیاهی با سبزیجات تازه",
+    "image": "/public/food.jpg"
+  },
+  {
+    "id": 30,
+    "name": "پیتزا پاسترامی",
+    "price": 180000,
+    "short_description": "پیتزا با پاسترامی و پنیر",
+    "image": "/public/food.jpg"
+  }
+]
