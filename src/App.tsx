@@ -5,12 +5,17 @@ import { Footer } from "./components/Footer";
 import { Menu } from "./components/Menu";
 import { MenuProps } from "./components/Menu";
 import { useEffect, useState } from "react";
+import { Cart, CartProps } from "./components/Cart";
+import { Dispatch, SetStateAction } from "react";
+import { usePersistedState } from "./utils/Persisted";
+
+export const notify = (text: string) => toast(text);
 
 function App() {
-  const notify = () => toast("Wow so easy!");
-
   const [menuItems, setMenuItems] = useState<MenuProps[]>([]);
 
+  // useEffect lets you perform the fetch after the initial render
+  // and ensures it only happens once (or when dependencies change).
   useEffect(() => {
     fetch("/data.json")
       .then((response) => {
@@ -23,11 +28,15 @@ function App() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  const [cartItems, setCartItems] = usePersistedState<CartProps[] | []>(
+    [],
+    "cart"
+  );
+
   return (
     <div className="min-h-screen">
       <Header />
-      <div>
-        <button onClick={notify}>Notify!</button>
+      <div dir="rtl">
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -38,11 +47,20 @@ function App() {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="colored"
-          transition={Flip}
+          theme="light"
         />
+        <ToastContainer />
       </div>
-      <Menu props={menuItems}></Menu>
+      <Menu
+        props={menuItems}
+        setCartItems={setCartItems}
+        cartItem={cartItems}
+      ></Menu>
+      <Cart
+        props={cartItems}
+        setCartItems={setCartItems}
+        cartItem={cartItems}
+      ></Cart>
       <Footer />
     </div>
   );
