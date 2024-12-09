@@ -43,8 +43,8 @@ export function Cart({
   };
 
   return (
-    <div className="p-10">
-      <h2 className="text-xl font-bold mb-6">سبد شما</h2>
+    <div className="p-5 m-5 border-2 border-gray-300 rounded-lg">
+      <h2 className="text-3xl font-bold mb-6 text-gray-800">سبد شما</h2>
       <div className="grid grid-cols-1 gap-6">
         {props.map((item) => (
           <div
@@ -52,15 +52,15 @@ export function Cart({
             className="bg-gray-50 p-4 rounded shadow-lg flex items-center justify-between"
           >
             <div>
-              <h4 className="font-bold">{item.name}</h4>
+              <h4 className="font-bold text-gray-800">{item.name}</h4>
             </div>
             <div className="flex items-center space-x-4">
               <p className="text-md mx-5 text-amber-500 font-bold font-farsi">
-                {item.price} تومان
+                {item.price * item.quantity} تومان
               </p>
               <div className="flex items-center space-x-2">
                 <button
-                  className="bg-gray-400 text-black w-7 h-7 rounded mx-2 font-allfont"
+                  className="bg-gray-400 text-black mb-0.5 w-7 h-7 rounded mx-2 font-allfont"
                   onClick={() => removeFromCart(item.id)}
                 >
                   -
@@ -84,6 +84,13 @@ export function Cart({
             </div>
           </div>
         ))}
+
+        <h2 className="text-2xl font-extrabold mb-6 text-gray-800">
+          جمع کل:{" "}
+          {props.reduce<number>((acc, cur) => {
+            return (acc += cur.price * cur.quantity);
+          }, 0)}
+        </h2>
       </div>
     </div>
   );

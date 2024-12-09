@@ -79,7 +79,8 @@ export function Menu({
         {currentItems.map((item) => (
           <div
             key={item.id}
-            className="bg-gray-50 hover:shadow-lg p-4 rounded m-2 flex-col justify-center gap-3"
+            className="bg-gray-50 hover:shadow-lg 
+            p-4 rounded m-2 flex-col justify-center gap-3"
           >
             <img
               className="place-self-center w-full h-[140px] object-cover"
@@ -87,7 +88,9 @@ export function Menu({
               alt={item.name}
               width="200"
             />
-            <h4 className="font-bold my-2 text-md">{item.name}</h4>
+            <h4 className="font-bold my-2 text-md text-gray-800">
+              {item.name}
+            </h4>
             <p className="text-gray-600 my-1 text-sm truncate">
               {item.short_description}
             </p>
@@ -101,7 +104,7 @@ export function Menu({
               </button>
               <p
                 id=""
-                className=" bg-white text-black rounded mx-2 mt-0.5 text-xs place-self-center font-bold"
+                className=" text-gray-800 rounded mx-2 mt-0.5 text-xs place-self-center font-bold"
               >
                 {cartItem.find((cartItem) => cartItem.id === item.id)
                   ?.quantity || 0}
