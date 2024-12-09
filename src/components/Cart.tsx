@@ -43,7 +43,7 @@ export function Cart({
   };
 
   return (
-    <div className="p-5 m-5 border-2 border-gray-300 rounded-lg">
+    <div className="p-5 m-5 border-2 border-gray-300 rounded-lg mx-32">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">سبد شما</h2>
       <div className="grid grid-cols-1 gap-6">
         {props.map((item) => (
@@ -54,14 +54,16 @@ export function Cart({
             <div>
               <h4 className="font-bold text-gray-800">{item.name}</h4>
             </div>
-            <div className="flex items-center space-x-4">
-              <p className="text-md mx-5 text-amber-500 font-bold font-farsi">
+            <div className="grid grid-flow-col g-4 place-items-center items-center space-x-4">
+              <p className="text-md mx-2 text-amber-500 font-bold font-farsi">
                 {item.price * item.quantity} تومان
               </p>
               <div className="flex items-center space-x-2">
                 <button
-                  className="bg-gray-400 text-black mb-0.5 w-7 h-7 rounded mx-2 font-allfont"
+                  className="bg-gray-300 text-gray-800 font-bold mb-0.5 w-7 h-7 rounded mx-2 
+                  font-allfont disabled:invisible hover:bg-slate-500 transition ease-in"
                   onClick={() => removeFromCart(item.id)}
+                  disabled={item.quantity == 1}
                 >
                   -
                 </button>
@@ -69,14 +71,14 @@ export function Cart({
                   {item.quantity}
                 </span>
                 <button
-                  className="bg-amber-500 hover:bg-amber-600 text-white w-7 h-7 rounded mx-2 font-allfont"
+                  className="bg-amber-500 hover:bg-amber-600 text-white font-bold w-7 h-7 rounded mx-2 font-allfont"
                   onClick={() => addToCart(item.id)}
                 >
                   +
                 </button>
               </div>
               <button
-                className="bg-rose-500 hover:shadow-lg hover:bg-rose-600 text-white w-7 h-7 rounded mx-2 font-allfont"
+                className="bg-red-600 hover:shadow-lg hover:bg-red-700 font-bold  text-white w-7 h-7 rounded mx-2 font-allfont"
                 onClick={() => removeItem(item.id)}
               >
                 x
@@ -89,9 +91,13 @@ export function Cart({
           جمع کل:{" "}
           {props.reduce<number>((acc, cur) => {
             return (acc += cur.price * cur.quantity);
-          }, 0)}
+          }, 0)}{" "}
+          تومان
         </h2>
       </div>
+      <button className="bg-amber-600 w-full py-2 rounded-lg font-extrabold text-white text-xl tracking-wider">
+        ثبت سفارش
+      </button>
     </div>
   );
 }

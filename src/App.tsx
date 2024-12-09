@@ -37,18 +37,7 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <div dir="rtl">
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={true}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
+        <ToastContainer />
         <ToastContainer />
       </div>
       <Menu

@@ -125,17 +125,17 @@ export function Menu({
         <button
           onClick={prevPage}
           disabled={currentPage === 1}
-          className="px-4 py-2 text-black bg-gray-300 hover:bg-gray-400 hover:shadow  rounded disabled:hidden"
+          className="px-4 py-2 text-gray-800 bg-gray-300 hover:bg-gray-400 hover:shadow  rounded disabled:hidden"
         >
           قبلی
         </button>
-        <span className="text-lg">
+        <span className="text-lg mt-2 text-gray-800">
           صفحه {currentPage} از {totalPages}
         </span>
         <button
           onClick={nextPage}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 bg-amber-600 hover:bg-amber-700 hover:shadow text-white rounded disabled:bg-gray-300"
+          className="px-4 py-2 bg-amber-600 hover:bg-amber-700 hover:shadow text-white rounded disabled:hidden"
         >
           بعدی
         </button>
