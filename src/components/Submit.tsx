@@ -1,7 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { Dispatch, SetStateAction, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { notify } from "../App";
 import { z } from "zod";
+import { CartProps } from "./Cart";
+
+interface SubmitComponentProps<T> {
+  setCartItems: Dispatch<SetStateAction<T>>;
+  cartItem: T;
+}
 
 const formSchema = z.object({
   name: z.string().min(1, "نام فیلد الزامی است"),
@@ -11,7 +17,10 @@ const formSchema = z.object({
 
 type FormErrors = Record<string, string>;
 
-export function Submit() {
+export function Submit({
+  setCartItems,
+  cartItem,
+}: SubmitComponentProps<CartProps[]>) {
   //uncontroled
 
   //   const nameRef = useRef();
@@ -46,7 +55,10 @@ export function Submit() {
         setErrors(newErrors);
       } else {
         setErrors({});
-        notify(`data ${result.data.address}`);
+        setCartItems([]);
+        notify(`سفارش شما به کد ${Date.now()} ثبت شد`);
+        formRef.current.reset();
+        handleCloseModal();
       }
     }
   };
@@ -83,7 +95,9 @@ export function Submit() {
     <>
       <button
         onClick={handleOpenModal}
+        disabled={cartItem.length == 0}
         className=" w-full bg-amber-600 py-2 px-4 border border-transparent 
+          
   text-center rounded-lg 
       font-extrabold text-white text-xl tracking-wider transition-all shadow-md hover:shadow-lg
    focus:bg-slate-700 focus:shadow-none active:bg-slate-700  ease-in duration-1000
@@ -98,7 +112,7 @@ export function Submit() {
         data-dialog-backdrop-close="true"
         className="pointer-events-auto fixed inset-0 z-40 grid h-screen
        w-screen place-items-center bg-black bg-opacity-60 opacity-0 
-       backdrop-blur-sm transition-opacity duration-300"
+       backdrop-blur-sm transition-opacity duration-300 hidden"
       >
         <div
           data-dialog="submit-modal"

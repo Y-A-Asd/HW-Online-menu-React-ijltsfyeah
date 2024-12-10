@@ -87,17 +87,18 @@ export function Cart({
             </div>
           </div>
         ))}
-
-        <h2 className="text-2xl font-extrabold mb-6 text-gray-800">
-          جمع کل:{" "}
-          {props.reduce<number>((acc, cur) => {
-            return (acc += cur.price * cur.quantity);
-          }, 0)}{" "}
-          تومان
-        </h2>
+        {props.length != 0 && (
+          <h2 className="text-2xl font-extrabold mb-6 text-gray-800">
+            جمع کل:{" "}
+            {props.reduce<number>((acc, cur) => {
+              return (acc += cur.price * cur.quantity);
+            }, 0)}{" "}
+            تومان
+          </h2>
+        )}
       </div>
 
-      <Submit></Submit>
+      <Submit setCartItems={setCartItems} cartItem={cartItem}></Submit>
     </div>
   );
 }
