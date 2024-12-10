@@ -37,8 +37,7 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <div dir="rtl">
-        <ToastContainer />
-        <ToastContainer />
+        <ToastContainer rtl={true} />
       </div>
       <Menu
         props={menuItems}

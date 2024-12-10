@@ -112,7 +112,11 @@ export function Menu({
               </p>
               <button
                 onClick={() => removeFromCart(item)}
-                className=" bg-gray-300 text-black w-7 h-7 rounded mx-2"
+                disabled={
+                  (cartItem.find((cartItem) => cartItem.id === item.id)
+                    ?.quantity || 0) == 0
+                }
+                className=" bg-gray-300 text-black w-7 h-7 rounded mx-2 disabled:invisible"
               >
                 -
               </button>

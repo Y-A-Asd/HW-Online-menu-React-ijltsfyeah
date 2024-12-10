@@ -158,7 +158,7 @@ export function Submit({
             </div>
             <button
               type="submit"
-              className="bg-amber-600 mt-4 text-white text-lg font-extrabold w-full rounded-lg p-2 mt-1"
+              className="bg-amber-600 mt-4 text-white text-lg font-extrabold w-full rounded-lg p-2 "
             >
               ثبت سفارش
             </button>
