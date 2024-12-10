@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { MenuProps } from "./Menu";
 import { notify } from "../App";
+import { Submit } from "./Submit";
 
 export interface CartProps extends MenuProps {
   quantity: number;
@@ -43,7 +44,7 @@ export function Cart({
   };
 
   return (
-    <div className="p-5 m-5 border-2 border-gray-300 rounded-lg mx-32">
+    <div className="p-5 m-5 border-2 border-gray-300 rounded-lg mx-32 z-1">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">سبد شما</h2>
       <div className="grid grid-cols-1 gap-6">
         {props.map((item) => (
@@ -95,9 +96,8 @@ export function Cart({
           تومان
         </h2>
       </div>
-      <button className="bg-amber-600 w-full py-2 rounded-lg font-extrabold text-white text-xl tracking-wider">
-        ثبت سفارش
-      </button>
+
+      <Submit></Submit>
     </div>
   );
 }
